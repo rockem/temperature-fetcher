@@ -11,15 +11,14 @@ class TemperatureFetcherTest {
 
     private static final String UNKNOWN_CITY = "bambaluba";
 
-    private final WeatherMapMock weatherMapMock = new WeatherMapMock();
 
     @BeforeEach
     void startWeatherMap() {
-        weatherMapMock.start();
     }
 
     @Test
     void failOnUnknownCity() {
+        WeatherMapMock weatherMapMock = WeatherMapMock.create();
         try {
             new TemperatureFetcher(WeatherMapMock.URL).fetchFor(UNKNOWN_CITY);
             fail(); // We didn't get an exception and thus our test fail
@@ -27,10 +26,10 @@ class TemperatureFetcherTest {
             // Got an exception as expected
         }
         weatherMapMock.hasReceived(UNKNOWN_CITY);
+        weatherMapMock.stop();
     }
 
     @AfterEach
     void stopWeatherMap() {
-        weatherMapMock.stop();
     }
 }

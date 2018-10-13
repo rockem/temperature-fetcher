@@ -24,4 +24,9 @@ public class WeatherMapMock {
         wireMockServer.stop();
     }
 
+    public static WeatherMapMock create() {
+        WeatherMapMock wm = new WeatherMapMock();
+        wm.start();
+        return wm;
+    }
 }
