@@ -1,0 +1,22 @@
+{
+  "id" : "c206d294-3a57-3274-a017-f8f82d13e5d8",
+  "request" : {
+    "url" : "/data/2.5/weather?q=bambaluba&appid=b408dce18a7ea0d86f37a0603c0ba0b2&units=metric",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "bodyFileName" : "body-2.5-weather-v7XY3.json",
+    "headers" : {
+      "Server" : "openresty",
+      "Date" : "Mon, 15 Oct 2018 17:29:33 GMT",
+      "Content-Type" : "application/json; charset=utf-8",
+      "Connection" : "keep-alive",
+      "X-Cache-Key" : "/data/2.5/weather?q=bambaluba&units=metric",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET, POST"
+    }
+  },
+  "uuid" : "c206d294-3a57-3274-a017-f8f82d13e5d8"
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "24bf0e67-2480-36f3-a39a-465a672226c6",
+  "request" : {
+    "url" : "/data/2.5/weather?q=Boston&appid=b408dce18a7ea0d86f37a0603c0ba0b2&units=metric",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName" : "body-2.5-weather-S2OJa.json",
+    "headers" : {
+      "Server" : "openresty",
+      "Date" : "Mon, 15 Oct 2018 17:29:33 GMT",
+      "Content-Type" : "application/json; charset=utf-8",
+      "Connection" : "keep-alive",
+      "X-Cache-Key" : "/data/2.5/weather?q=boston&units=metric",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : "true",
+      "Access-Control-Allow-Methods" : "GET, POST"
+    }
+  },
+  "uuid" : "24bf0e67-2480-36f3-a39a-465a672226c6"
+}
