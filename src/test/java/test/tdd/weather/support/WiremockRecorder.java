@@ -1,4 +1,4 @@
-package test.tdd.weather;
+package test.tdd.weather.support;
 
 import com.github.tomakehurst.wiremock.standalone.WireMockServerRunner;
 import org.apache.http.client.fluent.Request;
