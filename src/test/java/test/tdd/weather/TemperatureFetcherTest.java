@@ -8,7 +8,7 @@ import test.tdd.weather.support.WeatherMapMock;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static test.tdd.weather.support.WeatherMapMock.*;
 
 class TemperatureFetcherTest {
@@ -23,12 +23,8 @@ class TemperatureFetcherTest {
 
     @Test
     void failOnUnknownCity() throws Exception {
-        try {
-            temperatureFetcher.fetchFor(UNKNOWN_CITY);
-            fail(); // We didn't get an exception and thus our test fail
-        } catch (TemperatureFetcher.UnknownCityException e) {
-            // Got an exception as expected
-        }
+        assertThrows(TemperatureFetcher.UnknownCityException.class,
+                () -> temperatureFetcher.fetchFor(UNKNOWN_CITY));
         weatherMapMock.hasReceived(UNKNOWN_CITY);
     }
 
